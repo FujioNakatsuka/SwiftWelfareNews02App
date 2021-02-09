@@ -3,27 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F9AEF3AEB37D1615D5F1928 /* Pods_SwiftWelfareNews02App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF66419530A284F9790555C2 /* Pods_SwiftWelfareNews02App.framework */; };
 		8D7BFF2F25D232C1005B57D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFF2E25D232C1005B57D1 /* AppDelegate.swift */; };
 		8D7BFF3125D232C1005B57D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFF3025D232C1005B57D1 /* SceneDelegate.swift */; };
-		8D7BFF3325D232C1005B57D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFF3225D232C1005B57D1 /* ViewController.swift */; };
 		8D7BFF3625D232C1005B57D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D7BFF3425D232C1005B57D1 /* Main.storyboard */; };
 		8D7BFF3825D232C4005B57D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7BFF3725D232C4005B57D1 /* Assets.xcassets */; };
 		8D7BFF3B25D232C4005B57D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D7BFF3925D232C4005B57D1 /* LaunchScreen.storyboard */; };
+		8D7BFF4D25D2363E005B57D1 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFF4C25D2363E005B57D1 /* PickerViewController.swift */; };
+		8DAA3EA325D24C6300E459B5 /* InfoDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA3EA225D24C6300E459B5 /* InfoDeckViewController.swift */; };
+		8DAA3EA625D24F0800E459B5 /* PageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA3EA525D24F0800E459B5 /* PageTableViewController.swift */; };
+		8DAA3EA925D2520800E459B5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA3EA825D2520800E459B5 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0215FD4F44EA5520F33D249F /* Pods-SwiftWelfareNews02App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWelfareNews02App.release.xcconfig"; path = "Target Support Files/Pods-SwiftWelfareNews02App/Pods-SwiftWelfareNews02App.release.xcconfig"; sourceTree = "<group>"; };
+		794801CDC8374031B4E88DA4 /* Pods-SwiftWelfareNews02App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWelfareNews02App.debug.xcconfig"; path = "Target Support Files/Pods-SwiftWelfareNews02App/Pods-SwiftWelfareNews02App.debug.xcconfig"; sourceTree = "<group>"; };
 		8D7BFF2B25D232C1005B57D1 /* SwiftWelfareNews02App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWelfareNews02App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFF2E25D232C1005B57D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D7BFF3025D232C1005B57D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8D7BFF3225D232C1005B57D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8D7BFF3525D232C1005B57D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D7BFF3725D232C4005B57D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D7BFF3A25D232C4005B57D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D7BFF3C25D232C4005B57D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D7BFF4C25D2363E005B57D1 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		8DAA3EA225D24C6300E459B5 /* InfoDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDeckViewController.swift; sourceTree = "<group>"; };
+		8DAA3EA525D24F0800E459B5 /* PageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTableViewController.swift; sourceTree = "<group>"; };
+		8DAA3EA825D2520800E459B5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		FF66419530A284F9790555C2 /* Pods_SwiftWelfareNews02App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWelfareNews02App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9AEF3AEB37D1615D5F1928 /* Pods_SwiftWelfareNews02App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				8D7BFF2D25D232C1005B57D1 /* SwiftWelfareNews02App */,
 				8D7BFF2C25D232C1005B57D1 /* Products */,
+				E86831D1F68D8C6A1EBFC336 /* Pods */,
+				ADF529AC4C1D36D2318D7A04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +69,59 @@
 		8D7BFF2D25D232C1005B57D1 /* SwiftWelfareNews02App */ = {
 			isa = PBXGroup;
 			children = (
-				8D7BFF2E25D232C1005B57D1 /* AppDelegate.swift */,
-				8D7BFF3025D232C1005B57D1 /* SceneDelegate.swift */,
-				8D7BFF3225D232C1005B57D1 /* ViewController.swift */,
-				8D7BFF3425D232C1005B57D1 /* Main.storyboard */,
-				8D7BFF3725D232C4005B57D1 /* Assets.xcassets */,
-				8D7BFF3925D232C4005B57D1 /* LaunchScreen.storyboard */,
+				8D7BFF4A25D2353C005B57D1 /* Model */,
+				8D7BFF4925D23532005B57D1 /* View */,
+				8D7BFF4825D23505005B57D1 /* Controller */,
 				8D7BFF3C25D232C4005B57D1 /* Info.plist */,
 			);
 			path = SwiftWelfareNews02App;
+			sourceTree = "<group>";
+		};
+		8D7BFF4825D23505005B57D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8D7BFF2E25D232C1005B57D1 /* AppDelegate.swift */,
+				8D7BFF3025D232C1005B57D1 /* SceneDelegate.swift */,
+				8D7BFF4C25D2363E005B57D1 /* PickerViewController.swift */,
+				8DAA3EA225D24C6300E459B5 /* InfoDeckViewController.swift */,
+				8DAA3EA525D24F0800E459B5 /* PageTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8D7BFF4925D23532005B57D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D7BFF3425D232C1005B57D1 /* Main.storyboard */,
+				8D7BFF3725D232C4005B57D1 /* Assets.xcassets */,
+				8D7BFF3925D232C4005B57D1 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8D7BFF4A25D2353C005B57D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DAA3EA825D2520800E459B5 /* File.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADF529AC4C1D36D2318D7A04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF66419530A284F9790555C2 /* Pods_SwiftWelfareNews02App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E86831D1F68D8C6A1EBFC336 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				794801CDC8374031B4E88DA4 /* Pods-SwiftWelfareNews02App.debug.xcconfig */,
+				0215FD4F44EA5520F33D249F /* Pods-SwiftWelfareNews02App.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D7BFF3F25D232C4005B57D1 /* Build configuration list for PBXNativeTarget "SwiftWelfareNews02App" */;
 			buildPhases = (
+				E54CD679BD030D1815BE5D2C /* [CP] Check Pods Manifest.lock */,
 				8D7BFF2725D232C1005B57D1 /* Sources */,
 				8D7BFF2825D232C1005B57D1 /* Frameworks */,
 				8D7BFF2925D232C1005B57D1 /* Resources */,
+				0709105540734EAA47108E33 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +191,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0709105540734EAA47108E33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftWelfareNews02App/Pods-SwiftWelfareNews02App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftWelfareNews02App/Pods-SwiftWelfareNews02App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftWelfareNews02App/Pods-SwiftWelfareNews02App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E54CD679BD030D1815BE5D2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftWelfareNews02App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D7BFF2725D232C1005B57D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D7BFF3325D232C1005B57D1 /* ViewController.swift in Sources */,
+				8D7BFF4D25D2363E005B57D1 /* PickerViewController.swift in Sources */,
+				8DAA3EA925D2520800E459B5 /* File.swift in Sources */,
+				8DAA3EA325D24C6300E459B5 /* InfoDeckViewController.swift in Sources */,
 				8D7BFF2F25D232C1005B57D1 /* AppDelegate.swift in Sources */,
+				8DAA3EA625D24F0800E459B5 /* PageTableViewController.swift in Sources */,
 				8D7BFF3125D232C1005B57D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +387,7 @@
 		};
 		8D7BFF4025D232C4005B57D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 794801CDC8374031B4E88DA4 /* Pods-SwiftWelfareNews02App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +407,7 @@
 		};
 		8D7BFF4125D232C4005B57D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0215FD4F44EA5520F33D249F /* Pods-SwiftWelfareNews02App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
