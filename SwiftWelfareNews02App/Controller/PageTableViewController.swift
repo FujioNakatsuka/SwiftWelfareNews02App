@@ -35,6 +35,8 @@ class PageTableViewController: UITableViewController,SegementSlideContentScrollV
     }
         //XMLパース
         //XMLパース(主要ニュース)
+        print("A")
+        print(urlArray.debugDescription)
         for i in 0...urlArray.count - 1{
         
         let urlString = urlArray[i]

@@ -19,8 +19,13 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     
     var nameString = String()
     var urlString = String()
+    
     var nameArray = [String]()
     var urlArray = [String]()
+    
+    var nameArray2 = [String]()
+    var urlArray2 = [String]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,23 +65,37 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     //UIPickerViewのRowが選択された時の挙動
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         label.text = dataNameList[row]
+        nameArray.append(dataNameList[row])
+        urlArray.append(dataURLList[row])
     }
     
     @IBAction func selected(_ sender: Any) {
         
         if UserDefaults.standard.object(forKey: "nameArray") != nil{
             
-            nameArray = UserDefaults.standard.object(forKey: "nameArray") as! [String]
+            nameArray2 = UserDefaults.standard.object(forKey: "nameArray") as! [String]
             
         }
         if UserDefaults.standard.object(forKey: "urlArray") != nil{
             
-            urlArray = UserDefaults.standard.object(forKey: "urlArray") as! [String]
+            urlArray2 = UserDefaults.standard.object(forKey: "urlArray") as! [String]
             
         }
-        nameArray.append(nameString)
-        urlArray.append(urlString)
         
+        nameArray = nameArray + nameArray2
+        urlArray = urlArray + urlArray2
+        
+        // Int型の配列をNSOrderedSetに変換
+        let orderedSet: NSOrderedSet = NSOrderedSet(array:nameArray)
+        // 再度Arrayに戻す
+        nameArray = orderedSet.array as! [String]
+        
+        // Int型の配列をNSOrderedSetに変換
+        let orderedSet2: NSOrderedSet = NSOrderedSet(array:urlArray)
+        // 再度Arrayに戻す
+        urlArray = orderedSet2.array as! [String]
+        
+ 
         UserDefaults.standard.setValue(urlArray, forKey: "urlArray")
         UserDefaults.standard.setValue(nameArray, forKey: "nameArray")
 

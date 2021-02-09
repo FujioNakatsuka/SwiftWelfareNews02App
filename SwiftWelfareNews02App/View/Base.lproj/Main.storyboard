@@ -26,7 +26,6 @@
                                 </state>
                                 <connections>
                                     <action selector="moveToNextWithData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICA-cm-lyZ"/>
-                                    <segue destination="cJN-CS-WIp" kind="show" id="yZr-dg-eUa"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vie-eT-viU">
@@ -52,6 +51,7 @@
                     <navigationItem key="navigationItem" id="YuC-qQ-abb"/>
                     <connections>
                         <outlet property="pickerView" destination="vie-eT-viU" id="JER-YV-FXy"/>
+                        <segue destination="cJN-CS-WIp" kind="show" id="VVA-Kx-akP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
