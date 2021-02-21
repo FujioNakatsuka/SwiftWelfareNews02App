@@ -14,11 +14,11 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     
     @IBOutlet weak var pickerView: UIPickerView!
     //指定RSS一覧
-//    let dataNameList = ["厚生労働省","東京都","訪問看護と介護","小金井市","福祉医療機構"]
-//    let dataURLList = ["https://www.mhlw.go.jp/stf/news.rdf","https://www.metro.tokyo.lg.jp/rss/index.rdf","https://www.ndl.go.jp/jp/data/sakuin/rss/000000097643.xml","https://www.city.koganei.lg.jp/rss_news.xml","https://www.wam.go.jp/gyoseiShiryou/new_rss"]
-//
-    let dataNameList = ["厚生労働省"]
-    let dataURLList = ["https://www.mhlw.go.jp/stf/news.rdf"]
+    let dataNameList = ["厚生労働省","東京都","訪問看護と介護","小金井市","福祉医療機構"]
+    let dataURLList = ["https://www.mhlw.go.jp/stf/news.rdf","https://www.metro.tokyo.lg.jp/rss/index.rdf","https://www.ndl.go.jp/jp/data/sakuin/rss/000000097643.xml","https://www.city.koganei.lg.jp/rss_news.xml","https://www.wam.go.jp/gyoseiShiryou/new_rss"]
+
+//    let dataNameList = ["厚生労働省"]
+//    let dataURLList = ["https://www.mhlw.go.jp/stf/news.rdf"]
     
     
     

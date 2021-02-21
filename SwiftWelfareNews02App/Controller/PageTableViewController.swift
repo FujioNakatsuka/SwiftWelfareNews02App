@@ -39,6 +39,7 @@ class PageTableViewController: UITableViewController,SegementSlideContentScrollV
         print(urlArray.debugDescription)
         for i in 0...urlArray.count - 1{
         
+        //
         let urlString = urlArray[i]
  
         let url:URL = URL(string:urlString)!
@@ -156,12 +157,23 @@ class PageTableViewController: UITableViewController,SegementSlideContentScrollV
 
                
             override func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath){
-                    
-                  let pageTableViewController = PageTableViewController()
-                pageTableViewController.modalTransitionStyle = .crossDissolve
-                let newsItem = newsItems[IndexPath.row]
-                UserDefaults.standard.set(newsItem.url, forKey: "url")
-                present(pageTableViewController,animated: true, completion: nil)
+                
+                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let webVC = storyboard.instantiateViewController(withIdentifier: "webVC") as! WebViewController
+                webVC.urlString = newsItems[IndexPath.row].url!
+                self.present(webVC, animated: true, completion: nil)
+                
+                
+                
+                
+                
+                
+                
+//                  let pageTableViewController = PageTableViewController()
+//                pageTableViewController.modalTransitionStyle = .crossDissolve
+//                let newsItem = newsItems[IndexPath.row]
+//                UserDefaults.standard.set(newsItem.url, forKey: "url")
+//                present(pageTableViewController,animated: true, completion: nil)
                     
     }
 }
