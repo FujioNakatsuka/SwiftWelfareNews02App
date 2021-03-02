@@ -58,7 +58,8 @@ class InfoDeckViewController: SegementSlideDefaultViewController {
             let viewController: PageTableViewController = PageTableViewController()
             viewController.index = index
         
-            return PageTableViewController()
+//            return PageTableViewController()
+        return viewController
             
         default:
             return PageTableViewController()

@@ -27,6 +27,8 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     
     var nameString = String()
     var urlString = String()
+//    🌟indexをInt型に指定
+//    var index = Int()
     
     var nameArray = [String]()
     var urlArray = [String]()
@@ -47,6 +49,10 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
 
         
             }
+   
+    
+    
+    
     
     //NavigationBarを消す
     override func viewWillAppear(_ animated: Bool) {
@@ -92,6 +98,12 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         
         nameArray = nameArray + nameArray2
         urlArray = urlArray + urlArray2
+        
+        
+//        //🌟選択済みの要素を削除
+//        nameArray.remove(at: index)
+//        urlArray.remove(at: index)
+        
         
         // Int型の配列をNSOrderedSetに変換
         let orderedSet: NSOrderedSet = NSOrderedSet(array:nameArray)
