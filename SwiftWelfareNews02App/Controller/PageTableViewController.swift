@@ -28,8 +28,10 @@ class PageTableViewController: UITableViewController,SegementSlideContentScrollV
 
         tableView.backgroundColor = .clear
         
+        switch index {
+        case index:
         
-        if UserDefaults.standard.object(forKey: "urlArray") != nil{
+        if UserDefaults.standard.object(forKey: "urlArray2") != nil{
             
             urlArray = UserDefaults.standard.object(forKey: "urlArray") as! [String]
     }
@@ -37,19 +39,21 @@ class PageTableViewController: UITableViewController,SegementSlideContentScrollV
         //XMLパース(主要ニュース)
         print("A")
         print(urlArray.debugDescription)
-        for i in 0...urlArray.count - 1{
+//        for i in 0...urlArray.count - 1{
         
         //
-        let urlString = urlArray[i]
+        let urlString = urlArray[index]
  
         let url:URL = URL(string:urlString)!
         parser = XMLParser(contentsOf: url)!
         parser.delegate = self
         parser.parse()
+        
+        default:
+            break
         }
     }
-        
-    @objc var scrollView: UIScrollView{
+     @objc  var scrollView: UIScrollView{
         
         return tableView
         

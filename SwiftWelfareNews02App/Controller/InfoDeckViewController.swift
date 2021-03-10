@@ -23,6 +23,8 @@ class InfoDeckViewController: SegementSlideDefaultViewController {
     
     
     }
+        
+       print(nameArray.debugDescription)
         //画像をTableViewの下に置く
         let image = UIImage(named: "header")
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height:250))
