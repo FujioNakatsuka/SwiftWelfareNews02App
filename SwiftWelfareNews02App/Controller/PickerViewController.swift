@@ -14,13 +14,13 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     
     @IBOutlet weak var pickerView: UIPickerView!
     //指定RSS一覧
-    var dataNameList = ["厚生労働省","訪問看護と介護","小金井市","福祉医療機構"]
-    var dataURLList = ["https://www.mhlw.go.jp/stf/news.rdf","https://www.ndl.go.jp/jp/data/sakuin/rss/000000097643.xml","https://www.city.koganei.lg.jp/rss_news.xml","https://www.wam.go.jp/gyoseiShiryou/new_rss"]
+    var dataNameList = ["厚生労働省","訪問看護と介護","小金井市","福祉医療機構","東京都"]
+    var dataURLList = ["https://www.mhlw.go.jp/stf/news.rdf","https://www.ndl.go.jp/jp/data/sakuin/rss/000000097643.xml","https://www.city.koganei.lg.jp/rss_news.xml","https://www.wam.go.jp/gyoseiShiryou/new_rss","https://www.metro.tokyo.lg.jp/rss/rss_sm.xml"]
 
 //    let dataNameList = ["東京都福祉保健局",]
 //    let dataURLList = [""https://www.fukushihoken.metro.tokyo.lg.jp/rss_news.xml"]
     
-    
+
     
     
     
@@ -33,23 +33,18 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     var nameArray = [String]()
     var urlArray = [String]()
     
+//  選択してUserDefault に収容したもの
     var nameArray2 = [String]()
     var urlArray2 = [String]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-//        pickerView.delegate = self
-//        pickerView.dataSource = self
-//
-//
-//
-//        self.view.addSubview(pickerView)
-//
-//
+
     }
    
+ 
+    
     //NavigationBarを消す
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -57,12 +52,13 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         self.navigationController?.isNavigationBarHidden = true
    
         
-        if UserDefaults.standard.object(forKey: "nameArray") != nil || dataNameList.count < 4{
+        if UserDefaults.standard.object(forKey: "nameArray") != nil || dataNameList.count < 3{
             
             dataNameList = UserDefaults.standard.object(forKey: "nameArray") as! [String]
             
         }
-        if UserDefaults.standard.object(forKey: "urlArray") != nil || dataURLList.count < 4{
+        
+        if UserDefaults.standard.object(forKey: "urlArray") != nil || dataURLList.count < 3{
             
             dataURLList = UserDefaults.standard.object(forKey: "urlArray") as! [String]
             
@@ -72,10 +68,6 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         pickerView.dataSource = self
         self.view.addSubview(pickerView)
 
-        
-        
-        
-        
         
     }
     
@@ -88,6 +80,7 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         return dataNameList.count
     }
     
+    
     //UIPickerViewの最初の表示
     func pickerView(_ pickerView:UIPickerView, titleForRow row: Int,forComponent component: Int) -> String? {
         
@@ -96,8 +89,7 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     //UIPickerViewのRowが選択された時の挙動
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         label.text = dataNameList[row]
-//        nameArray.append(dataNameList[row])
-//        urlArray.append(dataURLList[row])
+
         index = row
     }
     
@@ -124,8 +116,6 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
             urlArray = UserDefaults.standard.object(forKey: "urlArray2") as! [String]
             
         }
-//        nameArray = nameArray + nameArray2
-//        urlArray = urlArray + urlArray2
         
         //選択されたもの
         urlArray.append(dataURLList[index])
@@ -137,22 +127,9 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         dataNameList.remove(at: index)
         dataURLList.remove(at: index)
 
-//        
-//        // Int型の配列をNSOrderedSetに変換
-//        let orderedSet: NSOrderedSet = NSOrderedSet(array:nameArray)
-//        // 再度Arrayに戻す
-//        nameArray = orderedSet.array as! [String]
-//        
-//        // Int型の配列をNSOrderedSetに変換
-//        let orderedSet2: NSOrderedSet = NSOrderedSet(array:urlArray)
-//        // 再度Arrayに戻す
-//        urlArray = orderedSet2.array as! [String]
-//        
- 
-        UserDefaults.standard.setValue(urlArray, forKey: "urlArray")
-        UserDefaults.standard.setValue(nameArray, forKey: "nameArray")
-
-        
+        UserDefaults.standard.setValue(dataURLList, forKey: "urlArray")
+        UserDefaults.standard.setValue(dataNameList, forKey: "nameArray")
+       
     }
     
     @IBAction func moveToNextWithData(_ sender: Any) {
@@ -160,12 +137,9 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         let nextVC = self.storyboard?.instantiateViewController(identifier: "nextVC") as! InfoDeckViewController
         
         self.navigationController?.pushViewController(nextVC, animated: true)
-   
-        
+       
         
     }
-    
-    
-    
+
     
 }

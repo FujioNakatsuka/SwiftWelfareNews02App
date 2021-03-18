@@ -33,15 +33,11 @@ class PageTableViewController: UITableViewController,SegementSlideContentScrollV
         
         if UserDefaults.standard.object(forKey: "urlArray2") != nil{
             
-            urlArray = UserDefaults.standard.object(forKey: "urlArray") as! [String]
+            urlArray = UserDefaults.standard.object(forKey: "urlArray2") as! [String]
     }
         //XMLパース
         //XMLパース(主要ニュース)
-        print("A")
-        print(urlArray.debugDescription)
-//        for i in 0...urlArray.count - 1{
-        
-        //
+
         let urlString = urlArray[index]
  
         let url:URL = URL(string:urlString)!
@@ -73,9 +69,7 @@ class PageTableViewController: UITableViewController,SegementSlideContentScrollV
         return view.frame.size.height/5
     }
     
-    
-    
-    
+  
     //日付は表示できるか？
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
@@ -85,15 +79,15 @@ class PageTableViewController: UITableViewController,SegementSlideContentScrollV
         
         cell.textLabel?.text = newsItem.title
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 15.0)
-        cell.textLabel?.textColor = .white
+        cell.textLabel?.textColor = .black
         cell.textLabel?.numberOfLines = 3
         
         cell.detailTextLabel?.text = newsItem.url
-        cell.detailTextLabel?.textColor = .white
+        cell.detailTextLabel?.textColor = .black
         
         //⭐️日時が表示されてurlは表示されなくなる
         cell.detailTextLabel?.text = newsItem.pubDate
-        cell.detailTextLabel?.textColor = .white
+        cell.detailTextLabel?.textColor = .black
         
         
         return cell
@@ -112,11 +106,9 @@ class PageTableViewController: UITableViewController,SegementSlideContentScrollV
         }else{
                 
                 currentElementName = elementName
-            
-            
+          
         }
-            
-
+  
     
     }
    
@@ -139,6 +131,9 @@ class PageTableViewController: UITableViewController,SegementSlideContentScrollV
                 lastItem.url = string
                 
             case "pubDate":
+                lastItem.pubDate = string
+                
+            case "dc:date":
                 lastItem.pubDate = string
                 
             default:break
@@ -167,18 +162,7 @@ class PageTableViewController: UITableViewController,SegementSlideContentScrollV
                 webVC.urlString = newsItems[IndexPath.row].url!
                 self.present(webVC, animated: true, completion: nil)
                 
-                
-                
-                
-                
-                
-                
-//                  let pageTableViewController = PageTableViewController()
-//                pageTableViewController.modalTransitionStyle = .crossDissolve
-//                let newsItem = newsItems[IndexPath.row]
-//                UserDefaults.standard.set(newsItem.url, forKey: "url")
-//                present(pageTableViewController,animated: true, completion: nil)
-                    
     }
+
 }
 

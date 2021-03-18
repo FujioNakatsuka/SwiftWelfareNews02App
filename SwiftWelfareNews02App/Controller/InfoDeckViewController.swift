@@ -16,16 +16,15 @@ class InfoDeckViewController: SegementSlideDefaultViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-    if UserDefaults.standard.object(forKey: "nameArray") != nil{
+    //nameArray2!🌟
+    if UserDefaults.standard.object(forKey: "nameArray2") != nil{
             
-    nameArray = UserDefaults.standard.object(forKey: "nameArray") as! [String]
+    nameArray = UserDefaults.standard.object(forKey: "nameArray2") as! [String]
     
     
     }
         
-       print(nameArray.debugDescription)
-        //画像をTableViewの下に置く
+            //画像をTableViewの下に置く
         let image = UIImage(named: "header")
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height:250))
     
@@ -36,8 +35,6 @@ class InfoDeckViewController: SegementSlideDefaultViewController {
         defaultSelectedIndex = 0
         
     }
-
-    //
     
     override func segementSlideHeaderView() -> UIView? {
             let headerView = UIView()
@@ -55,12 +52,13 @@ class InfoDeckViewController: SegementSlideDefaultViewController {
     override func segementSlideContentViewController(at index: Int) -> SegementSlideContentScrollViewDelegate? {
         
         switch index {
-        case nameArray.count - 1:
+//        case nameArray.count - 1:
+        case index:
             
             let viewController: PageTableViewController = PageTableViewController()
             viewController.index = index
         
-//            return PageTableViewController()
+
         return viewController
             
         default:
@@ -75,8 +73,5 @@ class InfoDeckViewController: SegementSlideDefaultViewController {
         self.navigationController?.isNavigationBarHidden = true
         
     }
-
-
-
 
 }
