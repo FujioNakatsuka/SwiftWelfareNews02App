@@ -14,8 +14,8 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     
     @IBOutlet weak var pickerView: UIPickerView!
     //指定RSS一覧
-    var dataNameList = ["厚生労働省","訪問看護と介護","小金井市","福祉医療機構","東京都"]
-    var dataURLList = ["https://www.mhlw.go.jp/stf/news.rdf","https://www.ndl.go.jp/jp/data/sakuin/rss/000000097643.xml","https://www.city.koganei.lg.jp/rss_news.xml","https://www.wam.go.jp/gyoseiShiryou/new_rss","https://www.metro.tokyo.lg.jp/rss/rss_sm.xml"]
+    var dataNameList = ["厚生労働省","東京都","小金井市","訪問看護と介護","福祉医療機構"]
+    var dataURLList = ["https://www.mhlw.go.jp/stf/news.rdf","https://www.metro.tokyo.lg.jp/rss/rss_sm.xml","https://www.city.koganei.lg.jp/rss_news.xml","https://www.ndl.go.jp/jp/data/sakuin/rss/000000097643.xml","https://www.wam.go.jp/content/wamnet/pcpub/top/wamnetlab/rss/wamnet_news_rss2.xml"]
 
 //    let dataNameList = ["東京都福祉保健局",]
 //    let dataURLList = [""https://www.fukushihoken.metro.tokyo.lg.jp/rss_news.xml"]
@@ -45,20 +45,20 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
    
  
     
-    //NavigationBarを消す
+    //NavigationBarを消さない
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.isNavigationBarHidden = true
-   
+//        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         
-        if UserDefaults.standard.object(forKey: "nameArray") != nil || dataNameList.count < 3{
+        if UserDefaults.standard.object(forKey: "nameArray") != nil || dataNameList.count < 4{
             
             dataNameList = UserDefaults.standard.object(forKey: "nameArray") as! [String]
             
         }
         
-        if UserDefaults.standard.object(forKey: "urlArray") != nil || dataURLList.count < 3{
+        if UserDefaults.standard.object(forKey: "urlArray") != nil || dataURLList.count < 4{
             
             dataURLList = UserDefaults.standard.object(forKey: "urlArray") as! [String]
             

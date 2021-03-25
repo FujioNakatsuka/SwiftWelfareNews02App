@@ -66,12 +66,13 @@ class InfoDeckViewController: SegementSlideDefaultViewController {
         }
     }
 
-    //NavigationBarを消す
+    //NavigationBarを消さない💫
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.isNavigationBarHidden = true
-        
+
+    //self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
 }
